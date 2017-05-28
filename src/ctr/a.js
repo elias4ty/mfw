@@ -1,3 +1,4 @@
+var render = require('../../lib/render');
 
 exports.getCtr = function*(next){
     console.log('aaaaaaaaa')
