@@ -1,3 +1,4 @@
+global.BASE_PATH = __dirname;
 const koa = require('koa');
 const router = require('koa-router')();
 const render = require('./lib/render');
@@ -6,7 +7,6 @@ const webpack = require('webpack');
 
 var webpackConfig = require('./webpack.dev.config.js')
 var app = new koa();
-global.BASE_PATH = __dirname;
 
 webpack(webpackConfig,function(err,stats) {
     console.log(stats.toString({
@@ -16,10 +16,9 @@ webpack(webpackConfig,function(err,stats) {
     }))
 });
 
-console.log(global.BASE_PATH)
 app.use(router.routes())
 .use(router.allowedMethods());
 
 nginx_router(router);
 
-app.listen(1107);
+app.listen(1109);

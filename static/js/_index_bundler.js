@@ -63,18 +63,20 @@
 /******/ 	__webpack_require__.p = "www.elias.com";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 3);
+/******/ 	return __webpack_require__(__webpack_require__.s = 5);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ 3:
-/***/ (function(module, exports) {
+/***/ 5:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
 
 (function () {
-  console.log('im _index js')
-})()
-
+  console.log('im _index js');
+})();
 
 /***/ })
 

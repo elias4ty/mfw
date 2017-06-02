@@ -1,8 +1,7 @@
 var render = require('../../lib/render');
 
 exports.getCtr = function*(next){
-    console.log('aaaaaaaaa')
-    this.body = yield render('a.html',{
+    this.body = yield render('a/a.html',{
         title : 'aaaaaaaaaa'
     })
 }

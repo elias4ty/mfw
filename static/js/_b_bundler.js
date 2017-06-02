@@ -63,18 +63,21 @@
 /******/ 	__webpack_require__.p = "www.elias.com";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 1);
+/******/ 	return __webpack_require__(__webpack_require__.s = 3);
 /******/ })
 /************************************************************************/
-/******/ ([
-/* 0 */,
-/* 1 */
-/***/ (function(module, exports) {
+/******/ ({
+
+/***/ 3:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
 
 (function () {
-  console.log('im _b js')
-})()
-
+  console.log('im _b js');
+})();
 
 /***/ })
-/******/ ]);
+
+/******/ });
