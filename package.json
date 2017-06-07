@@ -4,7 +4,8 @@
   "description": "nginx",
   "main": "app.js",
   "scripts": {
-    "dev": "node app.js"
+    "dev": "node app.js",
+    "build" : "node bundler.js"
   },
   "keywords": [
     "nginx"
