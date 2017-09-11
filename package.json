@@ -5,7 +5,7 @@
   "main": "app.js",
   "scripts": {
     "dev": "node app.js",
-    "build" : "node bundler.js"
+    "build": "node bundler.js"
   },
   "keywords": [
     "nginx"
@@ -26,5 +26,8 @@
     "vue-loader": "^12.2.1",
     "vue-template-compiler": "^2.3.3",
     "webpack": "^2.6.1"
+  },
+  "devDependencies": {
+    "shelljs": "^0.7.8"
   }
 }
