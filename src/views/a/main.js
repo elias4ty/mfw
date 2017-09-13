@@ -1,5 +1,5 @@
 import vue from 'vue'
-import fromA from './a.vue'
+import fromA from './a'
 
 new vue({
   el : '#ty',

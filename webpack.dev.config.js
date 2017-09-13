@@ -1,23 +1,25 @@
 const path = require('path'),
-      webpack = require('webpack');
+      webpack = require('webpack'),
+      ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
   entry : {
-      _index : './public/js/_index',
+      _index : './src/views/index/main',
       _a : './src/views/a/main',
-      _c : './public/js/_c',
-      _b : './public/js/_b',
       da : './public/js/chunk/da',
       db : './public/js/chunk/db'
   },
   output : {
     publicPath : 'www.elias.com',
-    filename : '[name]_bundler.[chunkhash].js',
-    path : path.resolve(__dirname,'static/js'),
-    chunkFilename : 'chunk/[name]_bundler.js'
+    filename : 'js/[name]_bundler.[chunkhash:7].js',
+    path : path.resolve(__dirname,'static'),
+    chunkFilename : 'js/chunk/[name]_bundler.js'
   },
-  resolve :{
-    extensions : ['.js','.vue']
+  resolve : {
+      extensions: ['.js', '.vue'],
+      alias: {
+        'css': path.resolve(__dirname, 'public/css')
+      }
   },
   module : {
     loaders: [
@@ -32,18 +34,40 @@ module.exports = {
       {
         test : /\.vue$/,
         loader : 'vue-loader',
-        include : path.resolve(__dirname,'./src/views')
+        include : path.resolve(__dirname,'./src/views'),
+          options: {
+              loaders : {
+                  css : ExtractTextPlugin.extract({
+                      use : 'css-loader',
+                      fallback : 'vue-style-loader'
+                  })
+              }
+          }
+      },
+      {
+        test : /\.css$/,
+        loader: ExtractTextPlugin.extract({
+            use : 'css-loader',
+            fallback : 'vue-style-loader'
+        })
       }
     ]
   },
   plugins : [
     new webpack.optimize.CommonsChunkPlugin({
       name : 'ventor',
-      minChunks : true
+      chunks: ['da','db']
     }),
-      new webpack.optimize.CommonsChunkPlugin({
-        name : 'manifest',
-        chunks : ['da','db']
-      })
+    //   ,
+    // new webpack.optimize.UglifyJsPlugin({
+    //     compress : {
+    //        warnings : false
+    //     },
+    //     mangle : false
+    // })
+    new ExtractTextPlugin({
+        filename: 'css/[name]_[contenthash:7].css',
+        allChunks : true
+    })
   ]
 }

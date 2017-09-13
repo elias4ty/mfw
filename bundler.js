@@ -15,9 +15,8 @@ var webpackConfig = merge({
     },
 },webpackConfig)
 
-console.log(webpackConfig);
 
-shell.rm('-rf','./static/js');
+shell.rm('-rf','./static');
 
 webpack(webpackConfig,function(err,stats) {
     process.stdout.write(stats.toString({

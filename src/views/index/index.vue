@@ -2,8 +2,12 @@
     <div id="ty">index.html</div>
 </template>
 
-<script type="text/javascript">
+<style>
+    #ty{background: blue}
+</style>
 
-exports default{
-}
+<script type="text/javascript">
+require('css/$b.css')
+    export default{
+    }
 </script>
