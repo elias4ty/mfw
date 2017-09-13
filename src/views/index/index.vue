@@ -7,7 +7,7 @@
 </style>
 
 <script type="text/javascript">
-require('css/$b.css')
+require('public/css/$b.css')
     export default{
     }
 </script>

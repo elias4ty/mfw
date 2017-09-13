@@ -18,7 +18,7 @@ module.exports = {
   resolve : {
       extensions: ['.js', '.vue'],
       alias: {
-        'css': path.resolve(__dirname, 'public/css')
+        'public': path.resolve(__dirname, 'public')
       }
   },
   module : {
@@ -58,16 +58,15 @@ module.exports = {
       name : 'ventor',
       chunks: ['da','db']
     }),
-    //   ,
     // new webpack.optimize.UglifyJsPlugin({
     //     compress : {
     //        warnings : false
     //     },
     //     mangle : false
-    // })
+    // }),
     new ExtractTextPlugin({
         filename: 'css/[name]_[contenthash:7].css',
-        allChunks : true
+        allChunks : false // 当设置成 false 时，vue 中 require 的 css 文件就要用到 fallback 配置的 loader
     })
   ]
 }
