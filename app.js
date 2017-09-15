@@ -12,5 +12,6 @@ app.use(router.routes())
 
 nginx_router(router);
 
-app.listen(1109);
-console.log('listen: 1109')
+app.listen(1109,function(){
+  console.log('start at 1109')
+});

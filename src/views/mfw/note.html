@@ -1,15 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+{% extends "../common/global.html" %}
+
+{% block head %}
   <title>蚂蜂窝_笔记</title>
-  <script type="text/javascript" src="../../js/common.js"></script>
   <link rel="stylesheet" href="../../../static/css/mafengwo/mfw_02.css">
-</head>
-<body>
-    <header>
+{% endblock%}
+
+{% block body %}
+ <header>
       <a class="logo"></a>
       <div class="right">
          <span>官网首页</span>
@@ -37,5 +34,5 @@
           </div>
         </div>
     </section>
-</body>
-</html>
+{% endblock%}
+
