@@ -1,7 +1,6 @@
-var render = require('../../lib/render');
+exports.getCtr = function*(){
 
-exports.getCtr = function*(next){
-    this.body = yield render('index/index.html',{
-        title : 'aaaaaaaaaa'
+    this.body =  this.nun.render('mfw/index.html',{
+        title : '首页'
     })
 }

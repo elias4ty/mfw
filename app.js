@@ -5,6 +5,8 @@ const render = require('./lib/render');
 const nginx_router = require('./src/router/nginx_router');
 var app = new koa();
 
+app.use(render());
+
 app.use(router.routes())
 .use(router.allowedMethods());
 
