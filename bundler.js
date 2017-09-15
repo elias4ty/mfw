@@ -18,11 +18,9 @@ var webpackConfig = merge({
 
 shell.rm('-rf','./static');
 
-webpack(webpackConfig,function(err,stats) {
+var compiler = webpack(webpackConfig);
+compiler.run(function(err,stats) {
     process.stdout.write(stats.toString({
-        colors : true,
-        modules: true,
-        errors: true,
-        publicPath : true
+            colors : true
     }))
 });
