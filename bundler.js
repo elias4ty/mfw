@@ -32,7 +32,7 @@ compiler.run(function(err,stats) {
     let version = {
         js : {},
         css : {}
-    },verpath = path.join(__dirname,'static/')
+    },verpath = '/resource/static/'
 
     console.log('3737337',verpath);
 

@@ -4,13 +4,14 @@ const path = require('path'),
 
 module.exports = {
   entry : {
-      _index : './src/views/index/main',
-      _a : './src/views/a/main',
-      da : './public/js/chunk/da',
-      db : './public/js/chunk/db'
+      // _index : './src/views/index/main',
+      // _a : './src/views/a/main'
+      // da : './public/js/chunk/da',
+      // db : './public/js/chunk/db'
+      'index' : 'view/mfw/index/main'
   },
   output : {
-    publicPath : 'www.elias.com',
+    publicPath : '/resource/',
     filename : 'js/[name]_bundler.[chunkhash:7].js',
     path : path.resolve(__dirname,'static'),
     chunkFilename : 'js/chunk/[name]_bundler.js'
@@ -18,7 +19,8 @@ module.exports = {
   resolve : {
       extensions: ['.js', '.vue'],
       alias: {
-        'public': path.resolve(__dirname, 'public')
+        'public': path.resolve(__dirname, 'public'),
+        'view' : path.resolve(__dirname,'src/views')
       }
   },
   module : {
@@ -54,10 +56,13 @@ module.exports = {
     ]
   },
   plugins : [
-    new webpack.optimize.CommonsChunkPlugin({
-      name : 'ventor',
-      chunks: ['da','db']
-    }),
+    // new webpack.optimize.CommonsChunkPlugin({
+    //   name : 'ventor'
+    // }),
+    // new webpack.optimize.CommonsChunkPlugin({
+    //    name : 'manifest',
+    //     chunks : ['ventor']
+    // }),
     // new webpack.optimize.UglifyJsPlugin({
     //     compress : {
     //        warnings : false

@@ -187,4 +187,6 @@
 
 <script>
     require('public/css/mfw/index.css')
+
+    export default {}
 </script>

@@ -1,5 +1,5 @@
 import vue from 'vue'
-import elias from '.index'
+import elias from './index'
 
 new vue({
     el : '#elias',

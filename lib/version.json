@@ -1,13 +1,8 @@
 {
    "js": {
-      "db": "E:\\exercise\\nginx_exercise\\static\\js/db_bundler.715be70.js",
-      "da": "E:\\exercise\\nginx_exercise\\static\\js/da_bundler.89ae38e.js",
-      "_a": "E:\\exercise\\nginx_exercise\\static\\js/_a_bundler.cce0011.js",
-      "_index": "E:\\exercise\\nginx_exercise\\static\\js/_index_bundler.a323d22.js",
-      "ventor": "E:\\exercise\\nginx_exercise\\static\\js/ventor_bundler.0c0b7c3.js"
+      "index": "/resource/static/js/index_bundler.2bc06f3.js"
    },
    "css": {
-      "_a": "E:\\exercise\\nginx_exercise\\static\\css/_a_84192ec.css",
-      "_index": "E:\\exercise\\nginx_exercise\\static\\css/_index_d1417f8.css"
+      "index": "/resource/static/css/index_5be0823.css"
    }
 }

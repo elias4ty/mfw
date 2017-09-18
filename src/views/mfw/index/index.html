@@ -1,13 +1,13 @@
 {% extends "../../common/global.html" %}
 {% block head %}
   <title>蚂蜂窝_找攻略</title>
-  <link rel="stylesheet" href="{{version.css._index}}">
+  <link rel="stylesheet" href="{{version.css.index}}">
 {% endblock%}
 
 {% block body %}
 <div id="elias"></div>
 {% endblock %}
 
-<% block script %>
-<script src="{{version.js._index}}" />
-<% endblock %>
+{% block footer %}
+<script src="{{version.js.index}}"></script>
+{% endblock %}
