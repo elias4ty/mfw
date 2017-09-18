@@ -1,12 +1,15 @@
-{% extends "../common/global.html" %}
-
-{% block head %}
+<!DOCTYPE html>
+<html lang="en" style="font-size:37.5px">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>蚂蜂窝_目的地</title>
+  <script type="text/javascript" src="../../js/common.js"></script>
   <link rel="stylesheet" href="../../../static/css/mafengwo/mfw_04.css">
-{% endblock%}
-
-{% block body %}
-<header>
+</head>
+<body>
+  <header>
     <i class="back"></i>
     <i class="logo"></i>
     <div><span><i>搜索目的地/攻略/游记/问答</i></span><em></em></div>
@@ -128,9 +131,6 @@
       </div>
     </div>
   </section>
-{% endblock%}
-
-{% block script%}
   <script type="text/javascript">
       function list(){
         var sheight = window.screen.height,
@@ -142,5 +142,5 @@
       window.addEventListener('resize',list);
       window.addEventListener('orientation',list);
   </script>
-{% endblock %}
-
+</body>
+</html>
