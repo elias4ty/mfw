@@ -6,9 +6,6 @@ var webpackConfig = require('./webpack.dev.config.js');
 const merge = require('webpack-merge');
 
 var webpackConfig = merge({
-    output : {
-        publicPath: 'www.tangyang.com'
-    },
     resolve : {
         extensions : ['.css'],
         alias : {
@@ -34,7 +31,6 @@ compiler.run(function(err,stats) {
         css : {}
     },verpath = '/resource/static/'
 
-    console.log('3737337',verpath);
 
     for(let d in dics){
         let key = d,val = dics[d];

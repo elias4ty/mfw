@@ -11,7 +11,7 @@ module.exports = {
       'index' : 'view/mfw/index/main'
   },
   output : {
-    publicPath : '/resource/',
+    // publicPath : '/resource/',
     filename : 'js/[name]_bundler.[chunkhash:7].js',
     path : path.resolve(__dirname,'static'),
     chunkFilename : 'js/chunk/[name]_bundler.js'
