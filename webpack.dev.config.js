@@ -3,18 +3,20 @@ const path = require('path'),
       ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
-  entry : {
+  entry : [
       // _index : './src/views/index/main',
-      // _a : './src/views/a/main'
+      './src/views/a/main',
+      'webpack-hot-middleware/client?path=/__webpack_hmr&timeout=20000'
+
       // da : './public/js/chunk/da',
       // db : './public/js/chunk/db'
-      'index' : 'view/mfw/index/main'
-  },
+      // 'index' : 'view/mfw/index/main'
+  ],
   output : {
-    // publicPath : '/resource/',
-    filename : 'js/[name]_bundler.[chunkhash:7].js',
-    path : path.resolve(__dirname,'static'),
-    chunkFilename : 'js/chunk/[name]_bundler.js'
+    publicPath : '/resource/',
+    filename : 'bundler.js',
+    path : __dirname,
+    chunkFilename : 'static/js/chunk/[name]_bundler.js'
   },
   resolve : {
       extensions: ['.js', '.vue'],
@@ -70,8 +72,10 @@ module.exports = {
     //     mangle : false
     // }),
     new ExtractTextPlugin({
-        filename: 'css/[name]_[contenthash:7].css',
+        filename: 'static/css/[name].css',
         allChunks : false // 当设置成 false 时，vue 中 require 的 css 文件就要用到 fallback 配置的 loader
-    })
+    }),
+      new webpack.HotModuleReplacementPlugin(),
+      new webpack.NoEmitOnErrorsPlugin()
   ]
 }

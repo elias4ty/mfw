@@ -29,7 +29,7 @@ compiler.run(function(err,stats) {
     let version = {
         js : {},
         css : {}
-    },verpath = '/resource/static/'
+    },verpath = '/resource/'
 
 
     for(let d in dics){

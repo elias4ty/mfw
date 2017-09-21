@@ -7,10 +7,15 @@ const dev = require('webpack-dev-middleware'),
 var compiler = webpack(config),app = express();
 
 let devM = dev(compiler,{
-    publicPath : '/resource/static/'
+    noInfo: true,
+    publicPath : config.output.publicPath
 })
 
-let hotM = hot(compiler);
+let hotM = hot(compiler,{
+    log:console.log,
+    path: '/__webpack_hmr',
+    heartbeat: 10 * 1000
+});
 
 app.use(devM);
 app.use(hotM);
