@@ -14,6 +14,7 @@ app.use(router.routes())
 
 nginx_router(router);
 
+console.log('171717---',app)
 app.listen(1109,function(err){
   if(err) {
     console.log('191919---',err)

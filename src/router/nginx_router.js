@@ -7,5 +7,5 @@ module.exports = function(router){
     router.get('/index',index.getCtr);
     router.get('/qa',qa.getCtr);
     router.get('/destination',destination.getCtr);
-    router.get('/a',a.getCtr);
+    router.get('/',a.getCtr);
 }
