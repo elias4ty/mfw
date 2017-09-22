@@ -14,6 +14,10 @@ app.use(router.routes())
 
 nginx_router(router);
 
-app.listen(1109,function(){
+app.listen(1109,function(err){
+  if(err) {
+    console.log('191919---',err)
+      return
+  }
   console.log('start at 1109')
 });
