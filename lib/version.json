@@ -1,6 +1,8 @@
 {
    "js": {
-      "_a": "/resource/static/js/_a_bundler.js"
+      "index": "/lala/js/index.js"
    },
-   "css": {}
+   "css": {
+      "index": "/lala/css/index.css"
+   }
 }
